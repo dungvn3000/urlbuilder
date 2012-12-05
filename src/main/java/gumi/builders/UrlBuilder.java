@@ -223,7 +223,7 @@ public final class UrlBuilder {
         final CharBuffer cb = CharBuffer.allocate(1);
         for (final char c : input.toCharArray()) {
             if (c == ' ') {
-                sb.append('+');
+                sb.append("%20");
             } else if (isUrlSafe(c)) {
                 sb.append(c);
             } else {
